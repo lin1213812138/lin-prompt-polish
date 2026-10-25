@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "prompt-polish (Prompt Optimizer)",
+    "description": "Rewrites your prompt with one lightweight model call before the main agent sees it, so the request is unambiguous and directly executable, cutting down repeated queries caused by misread intent."
+  }
+}

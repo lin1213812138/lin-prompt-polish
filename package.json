@@ -1,0 +1,53 @@
+{
+  "name": "lin-prompt-polish",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "在输入框左侧加一个 ✨ 润色 按钮：用一次辅助 LLM 调用把你的草稿改写成清晰、可执行的提示词，就地替换、绝不自动发送。Button-only, no auto-rewrite.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "prompt",
+    "prompt-engineering",
+    "efficiency"
+  ],
+  "license": "MIT",
+  "author": "lin1213812138",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lin1213812138/lin-prompt-polish.git"
+  },
+  "homepage": "https://github.com/lin1213812138/lin-prompt-polish#readme",
+  "bugs": "https://github.com/lin1213812138/lin-prompt-polish/issues",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "~3.18.5"
+  },
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
